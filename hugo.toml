@@ -1,0 +1,14 @@
+baseURL = "https://heng-mei.github.io/"
+languageCode = "zh-cn"
+title = "Heng-Mei"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowToc = true
