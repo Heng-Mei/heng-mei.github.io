@@ -96,46 +96,47 @@ prev->val <= curr->val
 ## 代码实现（C++）
 
 ```cpp
+#include <numeric>
+#include <utility>
+
 /**
  * Definition for singly-linked list.
  */
 struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
+  int val;
+  ListNode* next;
+  ListNode() : val(0), next(nullptr) {}
+  ListNode(int x) : val(x), next(nullptr) {}
+  ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 class Solution {
-public:
-    ListNode* insertionSortList(ListNode* head) {
-        ListNode dummy(std::numeric_limits<int>::min(), head);
+ public:
+  ListNode* insertionSortList(ListNode* head) {
+    ListNode dummy(std::numeric_limits<int>::min(), head);
 
-        auto prev = &dummy;
-        auto curr = head;
+    auto prev = &dummy;
+    auto curr = head;
 
-        while (curr) {
-            // 情况 1：当前节点已经有序
-            if (prev->val <= curr->val) {
-                prev = std::exchange(curr, curr->next);
-                continue;
-            }
+    while (curr) {
+      if (prev->val <= curr->val) {
+        prev = std::exchange(curr, curr->next);
+        continue;
+      }
 
-            // 情况 2：需要插入到前面的有序区间
-            prev->next = curr->next;
+      prev->next = curr->next;
 
-            auto scan = &dummy;
-            while (scan->next && scan->next->val < curr->val) {
-                scan = scan->next;
-            }
+      auto scan = &dummy;
+      while (scan->next && scan->next->val < curr->val) {
+        scan = scan->next;
+      }
 
-            curr->next = std::exchange(scan->next, curr);
-            curr = prev->next;
-        }
-
-        return dummy.next;
+      curr->next = std::exchange(scan->next, curr);
+      curr = prev->next;
     }
+
+    return dummy.next;
+  }
 };
 ```
 
