@@ -1,18 +1,84 @@
 baseURL = "https://heng-mei.github.io/"
-languageCode = "zh-cn"
-title = "Heng-Mei"
+title = "Heng-Mei Blog"
 theme = "PaperMod"
 
+languageCode = "zh-cn"
+defaultContentLanguage = "zh"
 enableRobotsTXT = true
 
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+term = ["HTML", "RSS"]
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
 [params]
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowCodeCopyButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowToc = true
+defaultTheme = "auto"
+disableThemeToggle = false
+
+ShowReadingTime = true
+ShowCodeCopyButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowToc = true
+TocOpen = true
+
+enableSearch = true
+categories = true
+
+ShowCanonicalLink = true
+displayFullLangName = true
+
+[params.profileMode]
+enabled = true
+title = "Heng-Mei"
+subtitle = "横眉冷对千夫指，俯首甘为孺子牛。"
+
+[[params.profileMode.buttons]]
+name = "随想"
+url = "/posts/"
+
+[[params.profileMode.buttons]]
+name = "算法"
+url = "/algorithms/"
+
+[[params.profileMode.buttons]]
+name = "笔记"
+url = "/notes/"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/Heng-Mei"
+
+[[menu.main]]
+name = "随想"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+name = "归档"
+url = "/archives/"
+weight = 20
+
+[[menu.main]]
+name = "分类"
+url = "/categories/"
+weight = 22
+
+[[menu.main]]
+name = "标签"
+url = "/tags/"
+weight = 25
+
+[[menu.main]]
+name = "搜索"
+url = "/search/"
+weight = 30
 
 [caches]
-  [caches.images]
-    dir = ':cacheDir/images'
+[caches.images]
+dir = ":cacheDir/images"
