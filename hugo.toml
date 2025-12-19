@@ -12,3 +12,7 @@ enableRobotsTXT = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowToc = true
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
