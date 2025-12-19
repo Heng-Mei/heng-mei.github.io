@@ -85,15 +85,6 @@ weight = 30
 [caches.images]
 dir = ":cacheDir/images"
 
-[markup]
-
-[markup.goldmark]
-
-[markup.goldmark.extensions]
-
-[markup.goldmark.extensions.passthrough]
-enable = true
-
-[markup.goldmark.extensions.passthrough.delimiters]
-block = [["$$", "$$"]]
-inline = [["$", "$"]]
+[markup.highlight]
+noClasses = false
+style = "github"
