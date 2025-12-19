@@ -1,0 +1,48 @@
+# =========================
+# Hugo
+# =========================
+
+# Build output
+/public/
+/resources/
+
+# Hugo cache
+.hugo_build.lock
+
+# =========================
+# OS / Editor
+# =========================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# =========================
+# Temporary files
+# =========================
+
+*~
+*.swp
+*.tmp
+
+# =========================
+# Node (if later used)
+# =========================
+
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# =========================
+# Logs
+# =========================
+
+*.log
