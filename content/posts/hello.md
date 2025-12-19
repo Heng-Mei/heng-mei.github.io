@@ -1,6 +1,6 @@
 +++
 date = '2025-12-19T19:30:37+08:00'
-draft = true
+draft = false
 title = 'Hello'
 tags = ["测试"]
 categories = ["随想"]

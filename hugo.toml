@@ -20,6 +20,8 @@ category = "categories"
 defaultTheme = "auto"
 disableThemeToggle = false
 
+math = true
+
 ShowReadingTime = true
 ShowCodeCopyButtons = true
 ShowPostNavLinks = true
@@ -82,3 +84,16 @@ weight = 30
 [caches]
 [caches.images]
 dir = ":cacheDir/images"
+
+[markup]
+
+[markup.goldmark]
+
+[markup.goldmark.extensions]
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [["$$", "$$"]]
+inline = [["$", "$"]]
