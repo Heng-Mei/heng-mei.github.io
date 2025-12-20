@@ -39,7 +39,7 @@ mainSections = ["posts", "algorithms", "notes"]
 
 [params.profileMode]
 enabled = true
-title = "Heng-Mei"
+title = "Heng-Mei 😶‍🌫️"
 subtitle = "横眉冷对千夫指，俯首甘为孺子牛。"
 
 [[params.profileMode.buttons]]
