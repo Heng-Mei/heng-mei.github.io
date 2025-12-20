@@ -22,8 +22,9 @@ content/
 
 layouts/
 └── partials/
-    ├── extend_head.html  # 扩展 <head>，注入 KaTeX 等资源
-    └── math.html         # KaTeX 配置与加载逻辑
+    ├── extend_head.html        # 扩展 <head>，注入 KaTeX 等资源
+    └── math_katex.html         # KaTeX 配置与加载逻辑
+    └── math_mathjax.html       # MathJax 配置与加载逻辑
 
 static/
 └── favicon.ico           # 站点图标
