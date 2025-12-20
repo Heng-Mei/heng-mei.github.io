@@ -1,0 +1,26 @@
+{{/* MathJax v3 configuration for Hugo + PaperMod */}}
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+
+      tags: 'all',
+
+      processEscapes: true,
+      processEnvironments: true
+    },
+
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+
+    chtml: {
+      scale: 1.0
+    }
+  };
+</script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>

@@ -100,3 +100,10 @@ dir = ":cacheDir/images"
 [markup.highlight]
 noClasses = false
 style = "github"
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['$$', '$$'], ['\[', '\]']]
+inline = [['$', '$'], ['\(', '\)']]
