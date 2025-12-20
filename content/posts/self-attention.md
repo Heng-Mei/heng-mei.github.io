@@ -1,5 +1,5 @@
 +++
-title = "自注意力（Self-Attention）机制的学习与理解"
+title = "自注意力(Self-Attention)机制的学习与理解"
 date = "2025-12-20T03:30:00+08:00"
 tags = ["Transformer", "Self-Attention", "深度学习", "NLP"]
 categories = ["深度学习"]
