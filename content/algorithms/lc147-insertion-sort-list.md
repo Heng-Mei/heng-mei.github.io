@@ -3,6 +3,7 @@ title = "LC 147：对链表进行插入排序"
 date = "2025-12-19T19:30:00+08:00"
 tags = ["链表", "排序", "插入排序"]
 categories = ["算法"]
+author = "Heng-Mei"
 
 draft = false
 weight = 147

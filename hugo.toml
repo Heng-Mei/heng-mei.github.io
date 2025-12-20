@@ -1,63 +1,112 @@
 baseURL = "https://heng-mei.github.io/"
 title = "Heng-Mei Blog"
-theme = "PaperMod"
+theme = "FixIt"
 
 languageCode = "zh-cn"
 defaultContentLanguage = "zh"
 enableRobotsTXT = true
 
+# ----------------------------------------
+# 输出格式
+# ----------------------------------------
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 section = ["HTML", "RSS"]
 taxonomy = ["HTML", "RSS"]
 term = ["HTML", "RSS"]
 
+# ----------------------------------------
+# 分类法
+# ----------------------------------------
 [taxonomies]
 tag = "tags"
 category = "categories"
 
+# ----------------------------------------
+# FixIt 参数
+# ----------------------------------------
 [params]
-defaultTheme = "auto"
-disableThemeToggle = false
 
-math = true
+# 主题模式
+[params.theme]
+default = "auto"
 
-ShowReadingTime = true
-ShowCodeCopyButtons = true
-ShowPostNavLinks = true
-ShowBreadCrumbs = true
-ShowToc = true
-TocOpen = true
+# 数学公式
+[params.math]
+enable = true
 
-enableSearch = true
-categories = true
+# 阅读体验
+[params.readingTime]
+enable = true
 
-ShowCanonicalLink = true
-displayFullLangName = true
+[params.code]
+copy = true
 
-mainSections = ["posts", "algorithms", "notes"]
+[params.toc]
+enable = true
+auto = true
 
-[params.profileMode]
-enabled = true
-title = "Heng-Mei 😶‍🌫️"
-subtitle = "横眉冷对千夫指，俯首甘为孺子牛。"
+[params.breadcrumb]
+enable = true
 
-[[params.profileMode.buttons]]
-name = "随想"
-url = "/posts/"
+[params.navigation]
+enable = true
 
-[[params.profileMode.buttons]]
-name = "算法"
-url = "/algorithms/"
+[params.search]
+enable = true
 
-[[params.profileMode.buttons]]
-name = "笔记"
-url = "/notes/"
+# SEO
+[params.seo]
+canonical = true
 
-[[params.socialIcons]]
-name = "github"
-url = "https://github.com/Heng-Mei"
+# 语言显示
+[params.language]
+displayFullName = true
 
+# 主内容区
+[params.section]
+paginate = 10
+main = ["posts", "algorithms", "notes"]
+
+[params.archives]
+enable = true
+
+# ----------------------------------------
+# 首页（极简，只显示 profile）
+# ----------------------------------------
+[params.home]
+
+  [params.home.profile]
+  enable = true
+  title = "Heng-Mei 😶‍🌫️"
+  subtitle = "横眉冷对千夫指，俯首甘为孺子牛。"
+
+  [[params.home.profile.buttons]]
+  name = "随想"
+  url = "/posts/"
+
+  [[params.home.profile.buttons]]
+  name = "算法"
+  url = "/algorithms/"
+
+  [[params.home.profile.buttons]]
+  name = "笔记"
+  url = "/notes/"
+
+  # 关闭首页文章列表
+  [params.home.posts]
+  enable = false
+
+# ----------------------------------------
+# 社交链接（FixIt 正确写法）
+# ----------------------------------------
+[params.social]
+GitHub = "Heng-Mei"
+RSS = false
+
+# ----------------------------------------
+# 主菜单
+# ----------------------------------------
 [[menu.main]]
 name = "随想"
 url = "/posts/"
@@ -93,14 +142,23 @@ name = "搜索"
 url = "/search/"
 weight = 30
 
+# ----------------------------------------
+# 缓存
+# ----------------------------------------
 [caches]
-[caches.images]
-dir = ":cacheDir/images"
+  [caches.images]
+  dir = ":cacheDir/images"
 
+# ----------------------------------------
+# 代码高亮
+# ----------------------------------------
 [markup.highlight]
 noClasses = false
 style = "github"
 
+# ----------------------------------------
+# MathJax passthrough（保留你的原配置）
+# ----------------------------------------
 [markup.goldmark.extensions.passthrough]
 enable = true
 
