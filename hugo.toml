@@ -35,6 +35,8 @@ categories = true
 ShowCanonicalLink = true
 displayFullLangName = true
 
+mainSections = ["posts", "algorithms", "notes"]
+
 [params.profileMode]
 enabled = true
 title = "Heng-Mei"
@@ -60,6 +62,16 @@ url = "https://github.com/Heng-Mei"
 name = "随想"
 url = "/posts/"
 weight = 10
+
+[[menu.main]]
+name = "算法"
+url = "/algorithms/"
+weight = 12
+
+[[menu.main]]
+name = "笔记"
+url = "/notes/"
+weight = 15
 
 [[menu.main]]
 name = "归档"
