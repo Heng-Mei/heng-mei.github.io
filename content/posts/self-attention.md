@@ -147,25 +147,15 @@ $$
 
 ## 七、自注意力整体流程示意
 
-```mermaid
-flowchart LR
-    X[输入序列 X]
-    X --> Q[Q = X·W_Q]
-    X --> K[K = X·W_K]
-    X --> V[V = X·W_V]
-
-    Q --> Dot[Q · K^T]
-    K --> Dot
-
-    Dot --> Scale[÷ √d_k]
-    Scale --> Softmax[Softmax]
-
-    Softmax --> Weight[注意力权重]
-    Weight --> Sum[加权求和]
-    V --> Sum
-
-    Sum --> Y[输出序列 Y]
-```
+{{< figure
+   src="/posts/self-attention/self-attention-flowchart.png"
+   caption="图 2：Self-Attention 机制中 Query / Key / Value 的生成与注意力计算流程图"
+   align="center"
+   width="100%"
+   alt="Self-Attention 中 Q/K/V 与注意力权重计算流程图"
+   link="/posts/self-attention/self-attention-flowchart.png"
+   target="_blank"
+>}}
 
 ---
 
