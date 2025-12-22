@@ -6,6 +6,8 @@ defaultContentLanguage = "zh"
 enableRobotsTXT = true
 enableEmoji = true
 
+mainSections = ["posts", "algorithms", "notes"]
+
 [outputs]
 home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
 page = ["html", "markdown"]
@@ -14,6 +16,7 @@ taxonomy = ["html"]
 term = ["html", "rss"]
 
 [taxonomies]
+archive = "archives"
 category = "categories"
 tag = "tags"
 collection = "collections"
@@ -85,6 +88,14 @@ ignoreFieldNorm = false
 GitHub = "Heng-Mei"
 RSS = false
 
+[params.recentlyUpdated]
+archives = true
+section = true
+list = true
+days = 30
+maxCount = 10
+
+[menu]
 [[menu.main]]
 name = "随想"
 url = "/posts/"
@@ -121,7 +132,6 @@ url = "/tags/"
 weight = 25
 
 [markup]
-
 [markup.highlight]
 codeFences = true
 lineNos = false
@@ -185,14 +195,6 @@ processEnvironments = true
 italicdiff = false
 arrowdel = false
 
-[caches]
-[caches.images]
-dir = ":cacheDir/images"
-
-[params.verification]
-google = "BZknj698kPXN9fxHxb1vFvdc0d-luCM1UYEY0olmDZk"
-bing = "5E7A7EA66C53643B33B56812868ABDDA"
-
 [params.page]
 license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
 linkToMarkdown = false
@@ -226,3 +228,12 @@ enable = false
 # 位于 "assets/"
 # 或者
 # someJavascript = "https://cdn.example.com/some.js"
+
+
+[caches]
+[caches.images]
+dir = ":cacheDir/images"
+
+[params.verification]
+google = "BZknj698kPXN9fxHxb1vFvdc0d-luCM1UYEY0olmDZk"
+bing = "5E7A7EA66C53643B33B56812868ABDDA"
