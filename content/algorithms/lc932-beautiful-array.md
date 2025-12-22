@@ -117,16 +117,14 @@ class Solution {
       return record[n];
     }
 
-    auto&& left = beautifulArray((n + 1) / 2);
-    auto&& right = beautifulArray(n / 2);
-
     std::vector<int> result;
     result.reserve(n);
 
-    std::ranges::transform(left, std::back_inserter(result),
+    std::ranges::transform(beautifulArray((n + 1) / 2),
+                           std::back_inserter(result),
                            [](int x) { return x * 2 - 1; });
 
-    std::ranges::transform(right, std::back_inserter(result),
+    std::ranges::transform(beautifulArray(n / 2), std::back_inserter(result),
                            [](int x) { return x * 2; });
 
     record.try_emplace(n, std::move(result));
