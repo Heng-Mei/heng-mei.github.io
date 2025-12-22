@@ -5,6 +5,11 @@ tags = ["Transformer", "Self-Attention", "深度学习", "NLP"]
 categories = ["深度学习"]
 +++
 
+> [!abstract]+
+> 本文系统梳理了自注意力（Self-Attention）机制的设计动机与数学形式，从序列建模需求出发，解释了其为何能够在一次计算中捕获全局依赖关系。
+> 通过对 Query / Key / Value 线性映射、相关性计算与 Softmax 归一化过程的逐步推导，阐明了注意力权重的来源及其线性代数本质。
+> 最终从整体流程与直观含义两个层面总结了自注意力在并行性、动态建模能力与全局上下文融合方面的核心优势。
+
 ![Self-Attention 中 Q/K/V 与注意力权重计算示意](/posts/self-attention/self-attention-structure.png "图 1：Self-Attention 机制中 Query / Key / Value 的生成与注意力计算流程")
 
 ## 一、为什么需要自注意力机制
@@ -38,6 +43,9 @@ $$
 > - Value（值）
 
 并通过 **Query 与 Key 的相关性** 来决定 **Value 的加权方式**。
+
+> [!WARNING]
+> 这里的**语义空间**不是传统意义的自然语言语义，而是在网络训练过程中学习到的向量空间，用于衡量注意力相关性。
 
 ---
 
