@@ -3,6 +3,7 @@ title = "第1章 类型推导 (Deducing Types)"
 date = "2025-12-20T19:30:00+08:00"
 tags = ["cpp", "effective-modern-cpp"]
 categories = ["cpp"]
+collections = "Effective Modern C++"
 
 draft = false
 weight = 1
