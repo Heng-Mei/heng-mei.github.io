@@ -5,15 +5,7 @@ tags = ["Transformer", "Self-Attention", "深度学习", "NLP"]
 categories = ["深度学习"]
 +++
 
-{{< figure
-   src="/posts/self-attention/self-attention-structure.png"
-   caption="图 1：Self-Attention 机制中 Query / Key / Value 的生成与注意力计算流程"
-   align="center"
-   width="35%"
-   alt="Self-Attention 中 Q/K/V 与注意力权重计算示意"
-   link="/posts/self-attention/self-attention-structure.png"
-   target="_blank"
->}}
+![Self-Attention 中 Q/K/V 与注意力权重计算示意](/posts/self-attention/self-attention-structure.png "图 1：Self-Attention 机制中 Query / Key / Value 的生成与注意力计算流程")
 
 ## 一、为什么需要自注意力机制
 
