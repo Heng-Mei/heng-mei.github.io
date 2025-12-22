@@ -1,112 +1,89 @@
 baseURL = "https://heng-mei.github.io/"
 title = "Heng-Mei Blog"
 theme = "FixIt"
-
 languageCode = "zh-cn"
 defaultContentLanguage = "zh"
 enableRobotsTXT = true
+enableEmoji = true
 
-# ----------------------------------------
-# 输出格式
-# ----------------------------------------
 [outputs]
-home = ["HTML", "RSS", "JSON"]
-section = ["HTML", "RSS"]
-taxonomy = ["HTML", "RSS"]
-term = ["HTML", "RSS"]
+home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
+page = ["html", "markdown"]
+section = ["html", "rss"]
+taxonomy = ["html"]
+term = ["html", "rss"]
 
-# ----------------------------------------
-# 分类法
-# ----------------------------------------
 [taxonomies]
 tag = "tags"
 category = "categories"
 
-# ----------------------------------------
-# FixIt 参数
-# ----------------------------------------
 [params]
-
-# 主题模式
-[params.theme]
-default = "auto"
-
-# 数学公式
-[params.math]
-enable = true
-
-# 阅读体验
-[params.readingTime]
-enable = true
-
-[params.code]
-copy = true
-
-[params.toc]
-enable = true
-auto = true
-
 [params.breadcrumb]
 enable = true
 
-[params.navigation]
+[params.cookieconsent]
+enable = false
+
+[params.backToTop]
 enable = true
+scrollpercent = true
+
+[params.home]
+[params.home.profile]
+enable = true
+gravatarEmail = "l888999666y@gmail.com"
+avatarURL = "/avatar.jpg"
+avatarMenu = "profile-dropdown"
+title = "Heng-Mei 😶‍🌫️"
+subtitle = "横眉冷对千夫指，俯首甘为孺子牛。"
+typeit = true
+social = true
+
+[params.home.posts]
+enable = false
+
+[params.author]
+name = "Heng-Mei"
+email = "l888999666y@gmail.com"
+link = "https://github.com/Heng-Mei"
+avatar = "/avatar.jpg"
+
+[params.footer]
+enable = true
+copyright = true
+author = true
+since = "2025"
+gov = ""
+icp = ""
+license = "<a href='https://opensource.org/licenses/MIT'>MIT License</a>"
+[params.footer.powered]
+enable = false
 
 [params.search]
 enable = true
+type = "fuse"
+contentLength = 4000
+placeholder = ""
+maxResultLength = 10
+snippetLength = 30
+highlightTag = "em"
+absoluteURL = false
 
-# SEO
-[params.seo]
-canonical = true
+[params.search.fuse]
+isCaseSensitive = false
+minMatchCharLength = 2
+findAllMatches = false
+location = 0
+threshold = 0.3
+distance = 100
+ignoreLocation = false
+useExtendedSearch = false
+ignoreFieldNorm = false
 
-# 语言显示
-[params.language]
-displayFullName = true
-
-# 主内容区
-[params.section]
-paginate = 10
-main = ["posts", "algorithms", "notes"]
-
-[params.archives]
-enable = true
-
-# ----------------------------------------
-# 首页（极简，只显示 profile）
-# ----------------------------------------
-[params.home]
-
-  [params.home.profile]
-  enable = true
-  title = "Heng-Mei 😶‍🌫️"
-  subtitle = "横眉冷对千夫指，俯首甘为孺子牛。"
-
-  [[params.home.profile.buttons]]
-  name = "随想"
-  url = "/posts/"
-
-  [[params.home.profile.buttons]]
-  name = "算法"
-  url = "/algorithms/"
-
-  [[params.home.profile.buttons]]
-  name = "笔记"
-  url = "/notes/"
-
-  # 关闭首页文章列表
-  [params.home.posts]
-  enable = false
-
-# ----------------------------------------
-# 社交链接（FixIt 正确写法）
-# ----------------------------------------
 [params.social]
 GitHub = "Heng-Mei"
 RSS = false
 
-# ----------------------------------------
-# 主菜单
-# ----------------------------------------
 [[menu.main]]
 name = "随想"
 url = "/posts/"
@@ -137,31 +114,76 @@ name = "标签"
 url = "/tags/"
 weight = 25
 
-[[menu.main]]
-name = "搜索"
-url = "/search/"
-weight = 30
+[markup]
 
-# ----------------------------------------
-# 缓存
-# ----------------------------------------
-[caches]
-  [caches.images]
-  dir = ":cacheDir/images"
-
-# ----------------------------------------
-# 代码高亮
-# ----------------------------------------
 [markup.highlight]
+codeFences = true
+lineNos = false
+lineNumbersInTable = true
 noClasses = false
-style = "github"
 
-# ----------------------------------------
-# MathJax passthrough（保留你的原配置）
-# ----------------------------------------
+[markup.goldmark]
+[markup.goldmark.extensions]
 [markup.goldmark.extensions.passthrough]
 enable = true
-
 [markup.goldmark.extensions.passthrough.delimiters]
-block = [['$$', '$$'], ['\[', '\]']]
-inline = [['$', '$'], ['\(', '\)']]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)'], ['$', '$']]
+
+[params.page]
+[params.page.math]
+enable = true
+type = "mathjax"
+# MathJax server-side rendering (https://www.mathjax.org)
+# MathJax config: https://docs.mathjax.org/en/latest/options/index.html
+[params.page.math.mathjax]
+cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+[params.page.math.mathjax.packages]
+"[+]" = ["physics", "xypic"]
+# custom macros map
+# syntax: <macro> = <definition>
+[params.page.math.mathjax.macros]
+# "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
+[params.page.math.mathjax.loader]
+load = ["ui/safe", "[tex]/physics", "[custom]/xypic.js"]
+[params.page.math.mathjax.loader.paths]
+custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+[params.page.math.mathjax.options]
+enableMenu = true
+# HTML tags that won't be searched for math
+skipHtmlTags = [
+  "script",
+  "noscript",
+  "style",
+  "textarea",
+  "pre",
+  "code",
+  "math",
+  "select",
+  "option",
+  "mjx-container",
+]
+# class that marks tags not to search
+ignoreHtmlClass = "mathjax_ignore"
+# HTML tags that can appear within math
+[params.page.math.mathjax.options.includeHtmlTags]
+# "#comment" = ""
+# br = "\n"
+# wbr = ""
+
+[params.page.math.mathjax.tex]
+tags = "all"
+processEscapes = true
+processEnvironments = true
+
+[params.page.math.mathjax.tex.physics]
+italicdiff = false
+arrowdel = false
+
+[caches]
+[caches.images]
+dir = ":cacheDir/images"
+
+[params.verification]
+google = "BZknj698kPXN9fxHxb1vFvdc0d-luCM1UYEY0olmDZk"
+bing = "5E7A7EA66C53643B33B56812868ABDDA"
