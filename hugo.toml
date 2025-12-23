@@ -210,6 +210,21 @@ collectionList = true
 # 目录配置
 [params.page.toc]
 auto = false
+ordered = true
+
+[params.page.heading.number]
+enable = true
+
+[params.page.heading.number.format]
+h1 = "{title}"
+h2 = "{h2} {title}"
+h3 = "{h2}.{h3} {title}"
+h4 = "{h2}.{h3}.{h4} {title}"
+h5 = "{h2}.{h3}.{h4}.{h5} {title}"
+h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
+
+[params.page.heading.toc.ordered]
+enable = true
 
 [params.page.share]
 enable = false
