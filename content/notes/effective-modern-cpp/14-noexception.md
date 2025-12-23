@@ -1,5 +1,5 @@
 +++
-title = "14-如果函数不抛出异常请使用 noexcept"
+title = "14-函数不抛出异常请使用 noexcept"
 date = "2025-12-23T15:30:00+08:00"
 tags = ["cpp", "effective-modern-cpp", "exception", "noexcept"]
 categories = ["cpp"]
