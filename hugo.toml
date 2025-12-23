@@ -37,7 +37,7 @@ scrollpercent = true
 enable = true
 gravatarEmail = "l888999666y@gmail.com"
 avatarURL = "/avatar.jpg"
-avatarMenu = "profile-dropdown"
+avatarMenu = "github"
 title = "Heng-Mei 😶‍🌫️"
 subtitle = "横眉冷对千夫指，俯首甘为孺子牛。"
 typeit = true
@@ -96,6 +96,13 @@ days = 30
 maxCount = 10
 
 [menu]
+
+[[menu.main]]
+identifier = "github"
+name = " "
+url = "https://github.com/Heng-Mei"
+weight = 1
+
 [[menu.main]]
 name = "随想"
 url = "/posts/"
