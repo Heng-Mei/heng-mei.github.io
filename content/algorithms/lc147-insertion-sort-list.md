@@ -28,17 +28,33 @@ weight = 147
 
 ### 示例 1
 
-> [!example]
-> 输入:  4 → 2 → 1 → 3
->
-> 输出:  1 → 2 → 3 → 4
+```mermaid
+flowchart LR
+    subgraph Output["输出"]
+        direction LR
+        B1[1] --> B2[2] --> B3[3] --> B4[4]
+    end
+
+    subgraph Input["输入"]
+        direction LR
+        A1[4] --> A2[2] --> A3[1] --> A4[3]
+    end
+```
 
 ### 示例 2
 
-> [!example]
-> 输入:  -1 → 5 → 3 → 4 → 0
->
-> 输出:  -1 → 0 → 3 → 4 → 5
+```mermaid
+flowchart LR
+    subgraph Output["输出"]
+        direction LR
+        D1[-1] --> D2[0] --> D3[3] --> D4[4] --> D5[5]
+    end
+
+    subgraph Input["输入"]
+        direction LR
+        C1[-1] --> C2[5] --> C3[3] --> C4[4] --> C5[0]
+    end
+```
 
 ---
 
