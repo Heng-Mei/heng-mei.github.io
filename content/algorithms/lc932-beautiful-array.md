@@ -3,6 +3,7 @@ title = "LC 932：漂亮数组"
 date = "2025-12-21T00:00:00+08:00"
 tags = ["分治", "构造", "数学归纳"]
 categories = ["算法"]
+collections = ["算法"]
 
 draft = false
 weight = 932
@@ -15,9 +16,9 @@ weight = 932
 1. `nums` 是由范围 $[1, n]$ 的整数组成的一个排列  
 2. 对于任意 $0 \le i < j < n$，**不存在** 下标 $k$（$i < k < j$）使得  
 
-```text
-2 * nums[k] == nums[i] + nums[j]
-```
+$$
+2 \cdot \mathrm{nums}[k] = \mathrm{nums}[i] + \mathrm{nums}[j]
+$$
 
 给定整数 $n$，返回长度为 $n$ 的任意一个漂亮数组。
 
@@ -62,8 +63,7 @@ weight = 932
 * 偶数内部仍然是偶数
 * **奇数 + 偶数 = 奇数，不可能等于 $2 \times $某个整数**
 
-因此：
-
+> [!note] 结论
 > 只要 **奇数子数组** 和 **偶数子数组** 本身都是漂亮数组，
 > 那么它们拼接后的整体一定仍是漂亮数组。
 
@@ -83,11 +83,12 @@ weight = 932
 
 这直接给出了递归结构：
 
-```text
-beautiful(n)
-= map(beautiful((n + 1) / 2), x → 2x - 1)
-+ map(beautiful(n / 2), x → 2x)
-```
+$$
+\operatorname{beautiful}(n) =
+\bigl( 2 \cdot \operatorname{beautiful}(\lceil n/2 \rceil) - 1 \bigr)
+\;\Vert\;
+\bigl( 2 \cdot \operatorname{beautiful}(\lfloor n/2 \rfloor) \bigr)
+$$
 
 ---
 
@@ -146,9 +147,10 @@ $1000, 500, 250, 125, 63, 62, 32, 31, 16, 15, 8, 7, 4, 3, 2, 1$。
 
   所有被真正计算的 $m$ 的总和满足几何级数：
 
-  ```text
-  n + n/2 + n/4 + ... < 2n
-  ```
+  $$
+  n + \frac{n}{2} + \frac{n}{4} + \cdots = \sum_{k=0}^{\log_{2}{n}} \frac{n}{2^k} < 2n
+  \label{eq:complexity}
+  $$
 
   因此构造总成本为 $O(n)$。
 
@@ -158,13 +160,7 @@ $1000, 500, 250, 125, 63, 62, 32, 31, 16, 15, 8, 7, 4, 3, 2, 1$。
 
 * **空间复杂度**
 
-  * 哈希表缓存：存储若干个不同规模 $m$ 的数组，总元素数同样满足
-
-    ```text
-    n + n/2 + n/4 + ... < 2n
-    ```
-
-    因此为 $O(n)$。
+  * 哈希表缓存：存储若干个不同规模 $m$ 的数组，总元素数同样满足 $\eqref{eq:complexity}$，因此为 $O(n)$。
 
   * 递归调用栈深度：$O(\log n)$。
 
@@ -178,6 +174,7 @@ $1000, 500, 250, 125, 63, 62, 32, 31, 16, 15, 8, 7, 4, 3, 2, 1$。
 
 进一步观察可以发现：
 
+> [!important]
 > 一个长度为 $m$ 的漂亮数组，其 **任意前 $k \le m$ 的子序列** 仍然是漂亮数组
 
 因此可以：

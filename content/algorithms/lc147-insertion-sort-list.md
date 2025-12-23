@@ -3,7 +3,7 @@ title = "LC 147：对链表进行插入排序"
 date = "2025-12-19T19:30:00+08:00"
 tags = ["链表", "排序", "插入排序"]
 categories = ["算法"]
-author = "Heng-Mei"
+collections = ["算法"]
 
 draft = false
 weight = 147
@@ -65,19 +65,23 @@ ListNode dummy(min_value, head);
 
 结构示意：
 
-```text
-dummy → [已排序] → prev → curr → 未排序
-```
+$$
+\text{dummy}
+\;\rightarrow\;
+\underbrace{\text{sorted}}_{\text{已排序}}
+\;\rightarrow\;
+\text{prev}
+\;\rightarrow\;
+\text{curr}
+\;\rightarrow\;
+\text{unsorted}
+$$
 
 ---
 
 ### 3. 已有序的快速判断（关键优化）
 
-如果满足：
-
-```cpp
-prev->val <= curr->val
-```
+如果满足：`prev->val <= curr->val`
 
 说明 `curr` 本身就在正确位置，无需插入，只需要向后推进指针。
 
