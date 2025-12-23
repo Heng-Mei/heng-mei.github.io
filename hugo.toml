@@ -22,6 +22,8 @@ tag = "tags"
 collection = "collections"
 
 [params]
+capitalizeTitles = false
+
 [params.breadcrumb]
 enable = true
 
