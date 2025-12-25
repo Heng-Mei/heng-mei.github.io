@@ -89,7 +89,7 @@ if (Derived* p = dynamic_cast<Derived*>(base_ptr)) {
 
 ---
 
-## 带初始化语句的条件（C++17+）
+## 带初始化语句的条件（C++17）
 
 从 C++17 起，`if` 语句支持在条件前添加一个**初始化语句**，其结构如下：
 
@@ -120,7 +120,7 @@ if (int result = compute(); result > threshold) {
 
 ---
 
-## `constexpr if`
+## `constexpr if`（C++17）
 
 C++17 引入了 `constexpr if`，用于**编译期判断条件并根据模板参数选择不同实现**：
 
