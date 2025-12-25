@@ -157,13 +157,13 @@ std::is_nothrow_move_constructible
 
 标准库中的 `swap` 通常是**条件 noexcept**：
 
-```cpp
+```cpp { title = "swap T[N]", hl_lines=[3]}
 template<class T, size_t N>
 void swap(T (&a)[N], T (&b)[N])
     noexcept(noexcept(swap(*a, *b)));
 ```
 
-```cpp
+```cpp { title = "swap pair&ltT1, T2&gt", hl_lines=["4-5"] }
 template<class T1, class T2>
 struct pair {
     void swap(pair& p)
