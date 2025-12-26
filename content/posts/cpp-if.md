@@ -1,6 +1,7 @@
 +++
 title = "深入理解 C++ 中的 if 语句"
 date = "2025-12-25T12:00:00+08:00"
+lastmod = "2025-12-26T12:00:00+08:00"
 tags = ["cpp", "if"]
 categories = ["cpp"]
 +++
@@ -71,19 +72,19 @@ if (x > 0) {
 
 除了表达式，C++ 标准允许在条件部分使用**声明语句**。声明语句必须是可以**转换为 bool** 的简单声明（通常是带初始化的变量声明）。这种写法在模板代码和需要局部变量的判断逻辑中非常有用。
 
-例如：
-
-```cpp
-if (Derived* p = dynamic_cast<Derived*>(base_ptr)) {
-    p->doSomething();
-}
-```
-
-上述代码中：
-
-* `Derived* p = dynamic_cast<Derived*>(base_ptr)` 是一个声明；
-* 如果声明出的指针 `p` 非空，则执行大括号内代码；
-* 声明的变量 `p` 只在这个 `if` 块的作用域内有效。
+> [!example]+
+>
+> ```cpp
+> if (Derived* p = dynamic_cast<Derived*>(base_ptr)) {
+>     p->doSomething();
+> }
+> ```
+>
+> 上述代码中：
+>
+> * `Derived* p = dynamic_cast<Derived*>(base_ptr)` 是一个声明；
+> * 如果声明出的指针 `p` 非空，则执行大括号内代码；
+> * 声明的变量 `p` 只在这个 `if` 块的作用域内有效。
 
 这一行为是标准允许的 “condition is a declaration” 语义，它等价于先声明变量再做判断，但作用域被限制在 `if` 块内，从而提升代码安全性与清晰度。
 
@@ -105,16 +106,16 @@ if (init-statement; condition) {
 * 避免污染外部作用域；
 * 初始化逻辑与判断逻辑集中到同一处。
 
-例如：
-
-```cpp
-if (int result = compute(); result > threshold) {
-    // 在此块内使用 result
-} else {
-    // 在 else 块内也可以访问 result
-}
-// 出了 if / else 块 result 不再有效
-```
+> [!example]+
+>
+> ```cpp
+> if (int result = compute(); result > threshold) {
+>     // 在此块内使用 result
+> } else {
+>     // 在 else 块内也可以访问 result
+> }
+> // 出了 if / else 块 result 不再有效
+> ```
 
 因为 `init-statement` 是先执行，再计算条件表达式，它可以用来初始化临时变量并立即参与判断。
 
@@ -156,19 +157,19 @@ if consteval {
 }
 ```
 
-例子：
-
-```cpp
-constexpr int f(int x) {
-    if consteval {
-        // 常量求值时走这里
-        return x * 2;
-    } else {
-        // 运行时求值走这里
-        return x;
-    }
-}
-```
+> [!example]+
+>
+> ```cpp
+> constexpr int f(int x) {
+>     if consteval {
+>         // 常量求值时走这里
+>         return x * 2;
+>     } else {
+>         // 运行时求值走这里
+>         return x;
+>     }
+> }
+> ```
 
 与传统的判断（例如 `std::is_constant_evaluated()`）相比，`if consteval` 可以更直接区分求值上下文，并且在语法层面更明确。
 

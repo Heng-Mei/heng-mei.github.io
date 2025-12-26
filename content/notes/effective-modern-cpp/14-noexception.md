@@ -1,6 +1,8 @@
 +++
 title = "14-函数不抛出异常请使用 noexcept"
 date = "2025-12-23T15:30:00+08:00"
+lastmod = "2025-12-26T12:00:00+08:00"
+
 tags = ["cpp", "effective-modern-cpp", "exception", "noexcept"]
 categories = ["cpp"]
 collections = "Effective Modern C++"
@@ -221,18 +223,18 @@ void process()
 
 ## 为了 `noexcept` 而扭曲实现是错误的
 
-反例设计：
-
-```cpp
-bool f() noexcept {
-    try {
-        may_throw();
-        return true;
-    } catch (...) {
-        return false;
-    }
-}
-```
+> [!example]+ 反例
+>
+> ```cpp
+> bool f() noexcept {
+>     try {
+>         may_throw();
+>         return true;
+>     } catch (...) {
+>         return false;
+>     }
+> }
+> ```
 
 问题：
 
