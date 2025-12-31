@@ -70,6 +70,7 @@ flowchart LR
 ---
 
 > [!tip]
+>
 > - `1 <= inorder.length <= 3000`
 >
 > - `postorder.length == inorder.length`
