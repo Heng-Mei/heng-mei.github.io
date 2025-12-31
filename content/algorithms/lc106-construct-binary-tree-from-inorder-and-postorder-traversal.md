@@ -70,15 +70,15 @@ flowchart LR
 ---
 
 > [!tip]
-> `1 <= inorder.length <= 3000`
+> - `1 <= inorder.length <= 3000`
 >
-> `postorder.length == inorder.length`
+> - `postorder.length == inorder.length`
 >
-> `inorder` 和 `postorder` 由 **不同的值** 组成
+> - `inorder` 和 `postorder` 由 **不同的值** 组成
 >
-> `postorder` 中每一个值都在 `inorder` 中
+> - `postorder` 中每一个值都在 `inorder` 中
 >
-> 题目保证输入一定对应一棵合法的二叉树
+> - 题目保证输入一定对应一棵合法的二叉树
 
 ---
 
