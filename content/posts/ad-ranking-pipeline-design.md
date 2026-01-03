@@ -16,14 +16,14 @@ categories = ["搜广推"]
 flowchart LR
     subgraph B[DSP]
         direction LR
-        R[召回<br/>100w → 1w]
-        C1[粗排<br/>1w → 1k]
-        F[精排<br/>1k → 个位数]
+        R[召回]
+        C1[粗排]
+        F[精排]
         P[调价<br/>pBidPrice]
-        R --> C1 --> F --> P
+        R -- 1w --> C1 -- 1k --> F -- 个位数 --> P
     end
 
-    A[广告主] --> B
+    A[广告主] -- 100w --> B
     B --> C[ADX]
     C --> D[SSP / 媒体]
     D --> E[用户]
