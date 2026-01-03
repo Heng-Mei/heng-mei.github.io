@@ -27,6 +27,9 @@ capitalizeTitles = false
 [params.breadcrumb]
 enable = true
 
+[params.podcast]
+enable = false
+
 [params.cookieconsent]
 enable = false
 
@@ -40,7 +43,11 @@ enable = true
 gravatarEmail = "l888999666y@gmail.com"
 avatarURL = "/avatar.jpg"
 avatarMenu = "github"
-title = "Heng-Mei <img src=\"/face-in-clouds-emoji.gif\"  class=\"emoji\"/>"
+title = """
+Heng-Mei <img src="/face-in-clouds-emoji.gif" class="emoji"/><br/>
+<img src="https://ghchart.rshah.org/409ba5/heng-mei" />
+"""
+
 subtitle = "横眉冷对千夫指，俯首甘为孺子牛。"
 typeit = true
 social = true
