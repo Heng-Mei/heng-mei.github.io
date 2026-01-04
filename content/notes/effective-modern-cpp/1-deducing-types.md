@@ -1,5 +1,5 @@
 +++
-title = "01-类型推导 (Deducing Types)"
+title = "1-类型推导 (Deducing Types)"
 date = "2025-12-20T19:30:00+08:00"
 tags = ["cpp", "effective-modern-cpp"]
 categories = ["cpp"]

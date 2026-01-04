@@ -79,6 +79,10 @@ snippetLength = 30
 highlightTag = "em"
 absoluteURL = false
 
+[params.page.related]
+enable = true
+count = 5
+
 [params.search.fuse]
 isCaseSensitive = false
 minMatchCharLength = 2
