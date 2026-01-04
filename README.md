@@ -3,12 +3,12 @@
 这是我的个人技术博客源码仓库，使用 **Hugo + FixIt** 构建，  
 主要记录算法、学习笔记以及一些技术随想。
 
-🌐 博客地址：<https://heng-mei.github.io/>
+🌐 博客地址：[Heng-Mei Blog](https://heng-mei.github.io/)
 
 ## 技术栈
 
-- **Static Site Generator**: Hugo
-- **Theme**: FixIt
+- **Static Site Generator**: [Hugo](https://gohugo.io/)
+- **Theme**: [FixIt](https://github.com/hugo-fixit/FixIt)
 - **Hosting**: GitHub Pages
 - **CI/CD**: GitHub Actions
 
