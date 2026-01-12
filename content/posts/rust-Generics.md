@@ -1,5 +1,5 @@
 +++
-title = "Rust 泛型（Generics）——类型抽象、约束与编译期机制"
+title = "Rust Generics —— 类型抽象、约束与编译期机制"
 date = "2026-01-09T17:00:00+08:00"
 tags = ["rust", "Generics", "Trait"]
 categories = ["rust"]
