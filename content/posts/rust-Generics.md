@@ -7,7 +7,7 @@ draft = false
 +++
 
 > [!abstract]+
-> 本文对 Rust 泛型（Generics）进行抽象与结构化总结。
+> 本文记录我对 Rust 泛型（Generics）进行抽象与结构化总结。
 >
 > 重点阐述**泛型的本质、约束方式、作用域层级、const 泛型以及单态化机制**。
 
