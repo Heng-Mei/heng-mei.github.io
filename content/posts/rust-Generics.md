@@ -382,3 +382,10 @@ enum Option_f64 { Some(f64), None }
 
 Rust 的泛型体系，本质上是一套
 **以编译期确定性为核心的类型抽象系统**。
+
+---
+
+## 参考链接
+
+> - [Rust Course · Generics](https://course.rs/basic/trait/generic.html)
+> - [The Rust Programming Language · Generics](https://doc.rust-lang.net.cn/stable/book/ch10-01-syntax.html)

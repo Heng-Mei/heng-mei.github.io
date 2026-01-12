@@ -388,3 +388,10 @@ flowchart LR
 > - `-> impl Trait` 能隐藏复杂返回类型但仍保持静态分发，前提是返回单一具体类型
 
 trait 之所以是 Rust 的核心概念，不是因为“它像接口”，而是因为它把“能力边界”做成了可被类型系统证明、可被编译器优化、并可在生态中大规模组合复用的抽象工具。
+
+---
+
+## 参考链接
+
+> - [Rust Course · Traits](https://course.rs/basic/trait/trait.html)
+> - [The Rust Programming Language · Traits](https://doc.rust-lang.net.cn/stable/book/ch10-02-traits.html)
