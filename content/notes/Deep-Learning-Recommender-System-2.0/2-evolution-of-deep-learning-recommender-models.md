@@ -35,15 +35,6 @@ weight = 2
 
 ```mermaid
 flowchart LR
-    subgraph 表示学习主线
-        direction LR
-        CF[协同过滤]
-        MF[矩阵分解]
-        NCF[NeuralCF / 双塔]
-        SEQ[序列 / Transformer]
-        CF --> MF --> NCF --> SEQ
-    end
-
     subgraph 特征交叉主线
         direction LR
         LR[逻辑回归]
@@ -51,6 +42,15 @@ flowchart LR
         WD[Wide & Deep]
         DFM[DeepFM / DCN]
         LR --> FM --> WD --> DFM
+    end
+
+    subgraph 表示学习主线
+        direction LR
+        CF[协同过滤]
+        MF[矩阵分解]
+        NCF[NeuralCF / 双塔]
+        SEQ[序列 / Transformer]
+        CF --> MF --> NCF --> SEQ
     end
 ```
 
