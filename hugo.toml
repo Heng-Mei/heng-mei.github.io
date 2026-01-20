@@ -99,9 +99,9 @@ GitHub = "Heng-Mei"
 RSS = false
 
 [params.recentlyUpdated]
-archives = true
-section = true
-list = true
+archives = false
+section = false
+list = false
 days = 30
 maxCount = 10
 
