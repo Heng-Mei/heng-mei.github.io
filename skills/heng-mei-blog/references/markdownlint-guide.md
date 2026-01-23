@@ -34,16 +34,3 @@ Current settings:
 
 - Extension README: `skills/heng-mei-blog/references/vscode-markdownlint/README.md`
 - Rules list: `skills/heng-mei-blog/references/vscode-markdownlint/README.md` (Rules section)
-
-## Git commit conventions
-
-Use Conventional Commits, following the patterns already in this repo:
-
-- `docs: ...`
-- `docs(scope): ...`
-
-Keep messages short and action-oriented.
-Examples from this repo:
-
-- `docs(skills): add skill docs and hugo/fixIt reference submodules`
-- `docs(recommender): reorder subgraphs in flowchart`

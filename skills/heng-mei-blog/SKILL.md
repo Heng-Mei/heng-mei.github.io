@@ -64,3 +64,16 @@ rg -n "front matter|page bundles|archetypes" skills/heng-mei-blog/references/hug
 - Start with the repo map and current config summary.
 - If a format or shortcode is needed, check FixIt docs first.
 - If a core Hugo behavior is unclear, check Hugo docs.
+
+## Git commit conventions
+
+Use Conventional Commits, following the patterns already in this repo:
+
+- `docs: ...`
+- `docs(scope): ...`
+
+Keep messages short and action-oriented.
+Examples from this repo:
+
+- `docs(skills): add skill docs and hugo/fixIt reference submodules`
+- `docs(recommender): reorder subgraphs in flowchart`
