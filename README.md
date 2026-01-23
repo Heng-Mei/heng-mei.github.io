@@ -15,17 +15,19 @@
 ## 目录结构
 
 ```text
-content/
-├── algorithms/   # 算法与题解
-├── notes/        # 学习笔记
-└── posts/        # 随想
-
-static/
-└── favicon.ico           # 站点图标
-└── avatar.jpg            # 个人头像
-└── ...                   # 其他资源文件
-
-themes/FixIt/             # Hugo 主题
+archetypes/              # 内容模板（默认 front matter）
+assets/                  # 资源管道（可被 Hugo 处理的资源）
+content/                 # 文章与页面
+├── algorithms/           # 算法与题解
+├── notes/                # 学习笔记
+└── posts/                # 随想
+public/                  # 生成的静态站点输出（可忽略/不手改）
+resources/               # Hugo 构建缓存
+skills/                  # 项目专用技能与参考文档
+static/                  # 站点静态资源（头像/图标等）
+themes/FixIt/            # Hugo 主题（submodule）
+hugo.toml                # 站点配置
+README.md                # 项目说明
 ```
 
 ## 说明
