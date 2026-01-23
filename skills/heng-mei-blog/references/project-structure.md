@@ -11,6 +11,7 @@
 - `resources/` — Hugo generated cache.
 - `public/` — built site output (generated; don’t edit directly).
 - `skills/` — project-specific skills and reference docs.
+- `.markdownlint.json` — Markdownlint configuration for this repo.
 
 ## Content layout in this repo
 
@@ -27,6 +28,7 @@ Example post template used in this repo:
 - Theme used: FixIt (`themes/FixIt`).
 - FixIt documentation (submodule): `skills/heng-mei-blog/references/hugo-fixit-docs`.
 - Hugo documentation (submodule): `skills/heng-mei-blog/references/hugo`.
+- Markdownlint extension (submodule): `skills/heng-mei-blog/references/vscode-markdownlint`.
 
 ## Fast navigation tips
 

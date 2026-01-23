@@ -1,7 +1,7 @@
 +++
 title = "14-函数不抛出异常请使用 noexcept"
 date = "2025-12-23T15:30:00+08:00"
-lastmod = "2025-12-26T12:00:00+08:00"
+lastmod = "2026-01-23T11:50:48+08:00"
 
 tags = ["cpp", "effective-modern-cpp", "exception", "noexcept"]
 categories = ["cpp"]
@@ -174,12 +174,13 @@ struct pair {
 };
 ```
 
-结论非常明确：
-
-* **底层类型的 swap 是否 noexcept**
-* 决定了所有高层结构是否 noexcept
-
-这形成了一条**向上传导的契约链**。
+> [!note]
+> 结论：
+>
+> * **底层类型的 swap 是否 noexcept**
+> * 决定了所有高层结构是否 noexcept
+>
+> 这形成了一条**向上传导的契约链**。
 
 ---
 

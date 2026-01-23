@@ -43,7 +43,8 @@ These are common FixIt Flavored Markdown features (see FixIt docs for the full l
 
 ### 1) Alerts / Admonitions
 
-FixIt supports GitHub/Obsidian-style alerts:
+FixIt supports GitHub/Obsidian-style alerts. If you only want the note icon
+and default title, use `> [!note]` with no custom title text.
 
 ```markdown
 > [!NOTE]
@@ -56,8 +57,15 @@ FixIt supports GitHub/Obsidian-style alerts:
 > 仅内容，无标题
 ```
 
-Supported types include: `note`, `abstract/summary/tldr`, `info`, `todo`, `tip`,
-`success`, `question/help/faq`, `warning`, `caution`, `failure/fail/missing`, `danger`, `bug`, `example`, `quote`.
+Supported types and aliases (per FixIt docs):
+`note`, `abstract` (alias: `summary`, `tldr`), `info`, `todo`,
+`tip` (alias: `hint`, `important`), `success` (alias: `check`, `done`),
+`question` (alias: `help`, `faq`), `warning` (alias: `caution`, `attention`),
+`failure` (alias: `fail`, `missing`), `danger` (alias: `error`), `bug`, `example`,
+`quote` (alias: `cite`).
+
+Note: a separator line `---` after an admonition is optional and only for visual
+sectioning. It is not part of the FixIt admonition syntax.
 
 ### 2) Math / LaTeX
 

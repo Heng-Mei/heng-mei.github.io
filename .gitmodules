@@ -7,3 +7,6 @@
 [submodule "skills/heng-mei-blog/references/hugo"]
 	path = skills/heng-mei-blog/references/hugo
 	url = https://github.com/gohugoio/hugo.git
+[submodule "skills/heng-mei-blog/references/vscode-markdownlint"]
+	path = skills/heng-mei-blog/references/vscode-markdownlint
+	url = https://github.com/DavidAnson/vscode-markdownlint.git
