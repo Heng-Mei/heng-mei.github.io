@@ -18,8 +18,9 @@ Use this skill to quickly understand the repository layout, author posts, and na
 5. FixIt markdown summary: `skills/heng-mei-blog/references/fixit-markdown-summary.md`
 6. Markdownlint guide: `skills/heng-mei-blog/references/markdownlint-guide.md`
 7. Deep docs locations:
-  - FixIt: `skills/heng-mei-blog/references/fixit-docs-map.md`
-  - Hugo: `skills/heng-mei-blog/references/hugo-docs-map.md`
+
+   - FixIt: `skills/heng-mei-blog/references/fixit-docs-map.md`
+   - Hugo: `skills/heng-mei-blog/references/hugo-docs-map.md`
 
 ## Core workflows
 
