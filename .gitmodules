@@ -1,3 +1,9 @@
 [submodule "themes/FixIt"]
 	path = themes/FixIt
 	url = https://github.com/hugo-fixit/FixIt.git
+[submodule "skills/heng-mei-blog/references/hugo-fixit-docs"]
+	path = skills/heng-mei-blog/references/hugo-fixit-docs
+	url = https://github.com/hugo-fixit/docs.git
+[submodule "skills/heng-mei-blog/references/hugo"]
+	path = skills/heng-mei-blog/references/hugo
+	url = https://github.com/gohugoio/hugo.git
