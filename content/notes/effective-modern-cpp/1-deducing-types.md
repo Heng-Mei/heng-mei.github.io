@@ -1,6 +1,7 @@
 +++
 title = "1-类型推导 (Deducing Types)"
 date = "2025-12-20T19:30:00+08:00"
+lastmod = "2026-01-23T14:28:27+08:00"
 tags = ["cpp", "effective-modern-cpp"]
 categories = ["cpp"]
 collections = "Effective Modern C++"
@@ -29,8 +30,9 @@ f(expr);
 
 编译器会基于 `expr` 同时推导出两个类型：
 
-* `T`
-* `ParamType`
+- `T`
+
+- `ParamType`
 
 二者并不一定相同，`ParamType` 可能包含 `const`、引用等修饰。类型推导的行为，**完全取决于 `ParamType` 的形式**。
 
@@ -45,6 +47,7 @@ f(expr);
 ### 推导规则
 
 1. 若 `expr` 是引用，**忽略引用本身**
+
 2. 用处理后的类型与 `ParamType` 匹配，推导 `T`
 
 ### 示例
@@ -64,9 +67,9 @@ f(rx);  // T = const int    param = const int&
 
 > [!important]
 >
-> * **引用性在推导中会被忽略**
+> - **引用性在推导中会被忽略**
 >
-> * **const 会成为 T 的一部分（当 ParamType 不是 const T& 时）**
+> - **const 会成为 T 的一部分（当 ParamType 不是 const T& 时）**
 
 ### `const T&` 的变化
 
@@ -101,8 +104,9 @@ f(px);  // T = const int
 
 ### 推导规则
 
-* **左值实参**：`T` 和 `ParamType` 都被推导为**左值引用**
-* **右值实参**：按“情景一”的常规规则推导
+- **左值实参**：`T` 和 `ParamType` 都被推导为**左值引用**
+
+- **右值实参**：按“情景一”的常规规则推导
 
 ### 示例
 
@@ -122,9 +126,9 @@ f(27);  // T = int           param = int&&
 
 > [!important]
 >
-> * **这是唯一一种 T 会被推导为引用的情况**
+> - **这是唯一一种 T 会被推导为引用的情况**
 >
-> * **通用引用会区分左值与右值，而普通引用不会**
+> - **通用引用会区分左值与右值，而普通引用不会**
 
 ---
 
@@ -140,6 +144,7 @@ void f(T param);
 ### 推导规则
 
 1. 忽略 `expr` 的引用
+
 2. 再忽略顶层的 `const` / `volatile`
 
 ### 示例
@@ -165,8 +170,9 @@ const char* const ptr = "hello";
 f(ptr); // T = const char*
 ```
 
-* 指针指向的数据的 `const` 被保留
-* **指针自身的 `const` 被丢弃**
+- 指针指向的数据的 `const` 被保留
+
+- **指针自身的 `const` 被丢弃**
 
 ---
 
@@ -198,8 +204,9 @@ f(name); // T = const char[13]
 
 此时：
 
-* `T` 包含数组大小
-* `param` 类型为 `const char (&)[13]`
+- `T` 包含数组大小
+
+- `param` 类型为 `const char (&)[13]`
 
 ### 一个实用技巧：推导数组大小
 
@@ -239,12 +246,13 @@ f2(someFunc); // T = void(&)(int, double)
 ---
 
 ## 总结：你必须记住的规则
+
 >
 > [!important]
 >
-> * 引用实参在推导时会**被视为非引用**
-> * **通用引用**对左值实参有特殊处理
-> * 传值推导会忽略 `const` / `volatile`
-> * **数组名与函数名会退化为指针**，除非用于初始化引用
+> - 引用实参在推导时会**被视为非引用**
+> - **通用引用**对左值实参有特殊处理
+> - 传值推导会忽略 `const` / `volatile`
+> - **数组名与函数名会退化为指针**，除非用于初始化引用
 
 理解这些规则，你才能真正掌控 `auto`、`decltype(auto)`、完美转发，以及现代 C++ 的类型系统。
