@@ -77,3 +77,6 @@ Examples from this repo:
 
 - `docs(skills): add skill docs and hugo/fixIt reference submodules`
 - `docs(recommender): reorder subgraphs in flowchart`
+
+Commit rule:
+Only create git commits when the user explicitly asks to do so.
