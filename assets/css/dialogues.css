@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+  .content mjx-container[display="true"] {
+    padding-block: 0.35em;
+  }
+}
