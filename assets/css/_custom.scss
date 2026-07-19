@@ -1,0 +1,7 @@
+.content mjx-container[display="true"] {
+  // MathJax writes an inline min-width after typesetting.
+  min-width: 0 !important;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
