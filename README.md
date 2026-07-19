@@ -1,7 +1,7 @@
 # Heng-Mei Blog
 
 这是我的个人技术博客源码仓库，使用 **Hugo + FixIt** 构建，  
-主要记录算法、学习笔记以及一些技术随想。
+主要记录算法、学习笔记、技术随想以及与 AI 对话形成的思考沉淀。
 
 🌐 博客地址：[Heng-Mei Blog](https://heng-mei.github.io/)
 
@@ -19,6 +19,7 @@ archetypes/              # 内容模板（默认 front matter）
 assets/                  # 资源管道（可被 Hugo 处理的资源）
 content/                 # 文章与页面
 ├── algorithms/           # 算法与题解
+├── dialogues/            # 共思录：与 AI 对话形成的思考记录
 ├── notes/                # 学习笔记
 └── posts/                # 随想
 public/                  # 生成的静态站点输出（可忽略/不手改）

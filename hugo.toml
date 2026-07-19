@@ -6,7 +6,7 @@ defaultContentLanguage = "zh"
 enableRobotsTXT = true
 enableEmoji = true
 
-mainSections = ["posts", "algorithms", "notes"]
+mainSections = ["dialogues", "posts", "algorithms", "notes"]
 
 [outputs]
 home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
@@ -112,6 +112,11 @@ identifier = "github"
 name = " "
 url = "https://github.com/Heng-Mei"
 weight = 1
+
+[[menu.main]]
+name = "共思录"
+url = "/dialogues/"
+weight = 9
 
 [[menu.main]]
 name = "随想"
