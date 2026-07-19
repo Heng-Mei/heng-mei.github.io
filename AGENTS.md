@@ -6,16 +6,16 @@
 
 ## OVERVIEW
 
-Chinese-language personal tech blog (算法 / 笔记 / 随想). Hugo Extended static site + FixIt theme, deployed to GitHub Pages (primary) and Cloudflare Pages (secondary). Author-only repo — README states "不接受 Pull Request".
+Chinese-language personal tech blog (算法 / 笔记 / 随想 / 共思录). Hugo Extended static site + FixIt theme, deployed to GitHub Pages (primary) and Cloudflare Pages (secondary). Author-only repo — README states "不接受 Pull Request".
 
 ## STRUCTURE
 
 ```text
-content/         # ALL authored content (25 .md files) — see content/AGENTS.md
+content/         # ALL authored content across 4 sections — see content/AGENTS.md
 static/          # served as-is: avatar.jpg, favicon.ico, page-bundle images
 assets/          # only jsconfig.json (maps IDE paths → themes/FixIt/assets)
 archetypes/      # default.md — TOML front matter template for `hugo new`
-hugo.toml        # sole site config (271 lines: menus, MathJax, search, params)
+hugo.toml        # sole site config (276 lines: menus, MathJax, search, params)
 build.sh         # Cloudflare Pages build (installs toolchain, then hugo build)
 wrangler.toml    # Cloudflare Pages config (build cmd + serves ./public)
 skills/          # AI skill + vendored reference submodules — see skills/AGENTS.md
@@ -29,6 +29,7 @@ resources/       # Hugo build cache — gitignored, generated
 | Task | Location | Notes |
 |------|----------|-------|
 | Write/edit an article | `content/{posts,algorithms,notes}/` | See `content/AGENTS.md` |
+| Convert a public GPT conversation | `content/dialogues/` | See `content/dialogues/AGENTS.md` |
 | Change site behavior/menus/params | `hugo.toml` | No `layouts/` override exists — everything is here |
 | Adjust build/toolchain versions | `.github/workflows/static.yml` AND `build.sh` | Keep BOTH in sync (dual hosting) |
 | Theme docs / Hugo API lookup | `skills/heng-mei-blog/references/` | Bundled offline submodules |

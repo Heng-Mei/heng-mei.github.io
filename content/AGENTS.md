@@ -1,6 +1,6 @@
 # CONTENT AUTHORING
 
-All authored site content. 25 markdown files across 3 sections. TOML front matter only.
+All authored site content across 4 sections. TOML front matter only.
 
 ## SECTIONS
 
@@ -8,6 +8,7 @@ All authored site content. 25 markdown files across 3 sections. TOML front matte
 |-----|------|---------|--------|
 | `posts/` | 随想 | Essays / thoughts | flat `.md` files |
 | `algorithms/` | 算法 | LeetCode solutions | flat; `weight = <LC number>` orders them |
+| `dialogues/` | 共思录 | Faithful archives of public AI conversations | nested page bundles; see `dialogues/AGENTS.md` |
 | `notes/` | 笔记 | Study notes | nested page-bundle dirs (e.g. `effective-modern-cpp/`) |
 
 Each section has an `_index.md` (list page) using `[cascade]\ntype = "..."`.
@@ -29,6 +30,7 @@ weight = 932                         # algorithms only: LC number
 
 - `title` + `date` required. `date` MUST carry the `+08:00` offset.
 - New files scaffold from `../archetypes/default.md` (`draft = true` by default — flip to `false` to publish).
+- Dialogue entries follow the stricter front matter and transcription contract in `dialogues/AGENTS.md`.
 
 ## FIXIT MARKDOWN
 
