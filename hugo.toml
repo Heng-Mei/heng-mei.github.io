@@ -1,7 +1,7 @@
 baseURL = "https://heng-mei.github.io/"
 title = "Heng-Mei Blog"
 theme = "FixIt"
-languageCode = "zh-cn"
+locale = "zh-cn"
 defaultContentLanguage = "zh"
 enableRobotsTXT = true
 enableEmoji = true
@@ -22,7 +22,13 @@ tag = "tags"
 collection = "collections"
 
 [params]
-capitalizeTitles = false
+version = "1.0.X"
+capitalize_titles = false
+license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+page_style = "normal"
+word_count = true
+reading_time = true
+collection_list = true
 
 [params.breadcrumb]
 enable = true
@@ -33,16 +39,16 @@ enable = false
 [params.cookieconsent]
 enable = false
 
-[params.backToTop]
+[params.back_to_top]
 enable = true
 scrollpercent = true
 
 [params.home]
 [params.home.profile]
 enable = true
-gravatarEmail = "l888999666y@gmail.com"
-avatarURL = "/avatar.jpg"
-avatarMenu = "github"
+gravatar_email = "l888999666y@gmail.com"
+avatar_url = "/avatar.jpg"
+avatar_menu = "github"
 title = """Heng-Mei <img src="/face-in-clouds-emoji.gif" class="emoji"/>"""
 
 subtitle = "横眉冷对千夫指，俯首甘为孺子牛。"
@@ -72,38 +78,38 @@ enable = false
 [params.search]
 enable = true
 type = "fuse"
-contentLength = 4000
+content_length = 4000
 placeholder = ""
-maxResultLength = 10
-snippetLength = 30
-highlightTag = "em"
-absoluteURL = false
+max_result_length = 10
+snippet_length = 30
+highlight_tag = "em"
+absolute_url = false
 
-[params.page.related]
+[params.related]
 enable = true
 count = 5
 
 [params.search.fuse]
-isCaseSensitive = false
-minMatchCharLength = 2
-findAllMatches = false
+is_case_sensitive = false
+min_match_char_length = 2
+find_all_matches = false
 location = 0
 threshold = 0.3
 distance = 100
-ignoreLocation = false
-useExtendedSearch = false
-ignoreFieldNorm = false
+ignore_location = false
+use_extended_search = false
+ignore_field_norm = false
 
 [params.social]
 GitHub = "Heng-Mei"
 RSS = false
 
-[params.recentlyUpdated]
+[params.recently_updated]
 archives = false
 section = false
 list = false
 days = 30
-maxCount = 10
+max_count = 10
 
 [menu]
 
@@ -168,27 +174,27 @@ enable = true
 block = [['\[', '\]'], ['$$', '$$']]
 inline = [['\(', '\)'], ['$', '$']]
 
-[params.page.math]
+[params.math]
 enable = true
 type = "mathjax"
 # MathJax server-side rendering (https://www.mathjax.org)
 # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
-[params.page.math.mathjax]
+[params.math.mathjax]
 cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-[params.page.math.mathjax.packages]
+[params.math.mathjax.packages]
 "[+]" = ["physics", "xypic"]
 # custom macros map
 # syntax: <macro> = <definition>
-[params.page.math.mathjax.macros]
+[params.math.mathjax.macros]
 # "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
-[params.page.math.mathjax.loader]
+[params.math.mathjax.loader]
 load = ["ui/safe", "[tex]/physics", "[custom]/xypic.js"]
-[params.page.math.mathjax.loader.paths]
-custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
-[params.page.math.mathjax.options]
-enableMenu = true
+[params.math.mathjax.loader.paths]
+custom = "https://fastly.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build"
+[params.math.mathjax.options]
+enable_menu = true
 # HTML tags that won't be searched for math
-skipHtmlTags = [
+skip_html_tags = [
   "script",
   "noscript",
   "style",
@@ -201,43 +207,38 @@ skipHtmlTags = [
   "mjx-container",
 ]
 # class that marks tags not to search
-ignoreHtmlClass = "mathjax_ignore"
+ignore_html_class = "mathjax_ignore"
 # HTML tags that can appear within math
-[params.page.math.mathjax.options.includeHtmlTags]
+[params.math.mathjax.options.include_html_tags]
 # "#comment" = ""
 # br = "\n"
 # wbr = ""
 
-[params.page.math.mathjax.tex]
+[params.math.mathjax.tex]
 tags = "all"
-processEscapes = true
-processEnvironments = true
+process_escapes = true
+process_environments = true
 
-[params.page.math.mathjax.tex.physics]
+[params.math.mathjax.tex.physics]
 italicdiff = false
 arrowdel = false
 
-[params.page]
-license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
-linkToMarkdown = false
-linkToSource = false
-linkToEdit = false
-linkToReport = false
-linkToVscode = false
-pageStyle = "normal"
-wordCount = true
-readingTime = true
-collectionList = true
+[params.post_link]
+markdown = false
+source = false
+edit = false
+report = false
+editor = ""
 
 # 目录配置
-[params.page.toc]
+[params.toc]
 auto = false
 ordered = true
 
-[params.page.heading.number]
+[params.heading.number]
 enable = true
 
-[params.page.heading.number.format]
+[params.heading.number.format]
 h1 = "{title}"
 h2 = "{h2} {title}"
 h3 = "{h2}.{h3} {title}"
@@ -245,22 +246,19 @@ h4 = "{h2}.{h3}.{h4} {title}"
 h5 = "{h2}.{h3}.{h4}.{h5} {title}"
 h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
 
-[params.page.heading.toc.ordered]
-enable = true
-
-[params.page.share]
+[params.share]
 enable = false
 
 # 第三方库配置
-[params.page.library]
+[params.library]
 
-[params.page.library.css]
+[params.library.css]
 # someCSS = "some.css"
 # 位于 "assets/"
 # 或者
 # someCSS = "https://cdn.example.com/some.css"
 
-[params.page.library.js]
+[params.library.js]
 # someJavascript = "some.js"
 # 位于 "assets/"
 # 或者

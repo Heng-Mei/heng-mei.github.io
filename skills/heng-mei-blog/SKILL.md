@@ -14,7 +14,7 @@ Use this skill to quickly understand the repository layout, author posts, and na
 1. Repo map: `skills/heng-mei-blog/references/project-structure.md`
 2. Actual site config summary: `skills/heng-mei-blog/references/hugo-toml-summary.md`
 3. Content authoring guide: `skills/heng-mei-blog/references/content-format.md`
-4. FixIt config map: `skills/heng-mei-blog/references/fixit-config-summary.md`
+4. FixIt v1 config map: `skills/heng-mei-blog/references/fixit-config-summary.md`
 5. FixIt markdown summary: `skills/heng-mei-blog/references/fixit-markdown-summary.md`
 6. Markdownlint guide: `skills/heng-mei-blog/references/markdownlint-guide.md`
 7. Deep docs locations:
@@ -39,7 +39,7 @@ Use this skill to quickly understand the repository layout, author posts, and na
 ### 3) Adjust site config
 
 - Read `skills/heng-mei-blog/references/hugo-toml-summary.md` to see current settings.
-- For FixIt options not in this repo, consult `skills/heng-mei-blog/references/fixit-config-summary.md` and then open the FixIt doc files referenced there.
+- For FixIt options not in this repo, consult `skills/heng-mei-blog/references/fixit-config-summary.md`, then the pinned `themes/FixIt/hugo.toml`. Public docs may still contain v0.4 config examples.
 
 ### 4) Resolve formatting/feature questions
 

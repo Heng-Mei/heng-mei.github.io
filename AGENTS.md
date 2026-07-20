@@ -13,7 +13,7 @@ Chinese-language personal tech blog (算法 / 笔记 / 随想 / 共思录). Hugo
 ```text
 content/         # ALL authored content across 4 sections — see content/AGENTS.md
 static/          # served as-is: avatar.jpg, favicon.ico, page-bundle images
-assets/          # only jsconfig.json (maps IDE paths → themes/FixIt/assets)
+assets/          # editor mapping + site-owned CSS/SCSS customizations
 archetypes/      # default.md — TOML front matter template for `hugo new`
 hugo.toml        # sole site config (276 lines: menus, MathJax, search, params)
 build.sh         # Cloudflare Pages build (installs toolchain, then hugo build)
@@ -30,7 +30,7 @@ resources/       # Hugo build cache — gitignored, generated
 |------|----------|-------|
 | Write/edit an article | `content/{posts,algorithms,notes}/` | See `content/AGENTS.md` |
 | Convert a public GPT conversation | `content/dialogues/` | See `content/dialogues/AGENTS.md` |
-| Change site behavior/menus/params | `hugo.toml` | No `layouts/` override exists — everything is here |
+| Change site behavior/menus/params | `hugo.toml` | FixIt v1 uses flattened `params` + snake_case keys |
 | Adjust build/toolchain versions | `.github/workflows/static.yml` AND `build.sh` | Keep BOTH in sync (dual hosting) |
 | Theme docs / Hugo API lookup | `skills/heng-mei-blog/references/` | Bundled offline submodules |
 | Theme internals / shortcodes | `themes/FixIt/layouts/` | Submodule — read only |
