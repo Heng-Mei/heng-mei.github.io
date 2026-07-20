@@ -45,6 +45,12 @@ weight = 932                         # algorithms only: LC number
 - **Mermaid**: fenced ```mermaid blocks.
 - A `---` after an admonition is cosmetic, not syntax.
 
+## TYPOGRAPHY
+
+- 中文散文引号统一使用 `「…」`（角引号）。
+- 机器解析上下文中保留原样，不做替换：行内/围栏代码、数学公式、URL、
+  Markdown 链接目标、HTML 属性、Hugo shortcode/template 语法、TOML 定界符。
+
 ## IMAGES / RESOURCES
 
 Preference order: page-bundle（与 `.md` 同目录）→ `../assets/`（pipeline）→
