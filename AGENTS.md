@@ -44,7 +44,7 @@ hugo new posts/your-post.md       # scaffold from archetypes/default.md
 git submodule update --init --recursive   # after clone
 ```
 
-Pinned toolchain (identical in CI + `build.sh`): Hugo **0.164.0** (extended+deploy), Go **1.26.5**, Node **24.18.0**, Dart Sass **1.101.0**.
+Pinned toolchain (identical in CI + `build.sh`): Hugo **0.166.0** (extended+deploy), Go **1.26.5**, Node **24.18.0**, Dart Sass **1.101.0**.
 
 ## CONVENTIONS
 

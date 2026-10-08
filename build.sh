@@ -6,7 +6,7 @@ set -euo pipefail
 main() {
   DART_SASS_VERSION="${DART_SASS_VERSION:-1.101.0}"
   GO_VERSION="${GO_VERSION:-1.26.5}"
-  HUGO_VERSION="${HUGO_VERSION:-0.164.0}"
+  HUGO_VERSION="${HUGO_VERSION:-0.166.0}"
   NODE_VERSION="${NODE_VERSION:-24.18.0}"
   export TZ="${TZ:-Europe/Oslo}"
 
