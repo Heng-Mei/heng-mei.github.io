@@ -1,14 +1,16 @@
 # FixIt Theme Configuration Summary (Reference)
 
-This is a structured summary of FixIt theme configuration areas, based on FixIt docs.
-Use it as a map, and jump to the docs in `skills/heng-mei-blog/references/hugo-fixit-docs` for details.
+This is a structured summary of FixIt v1 theme configuration areas.
+FixIt v1 is currently unreleased. Use the pinned `themes/FixIt/hugo.toml` as the
+configuration contract; the bundled public docs still contain some v0.4 examples.
 
-Primary source:
-- `content/zh-cn/documentation/getting-started/configuration/index.md`
+Primary sources:
+- `themes/FixIt/hugo.toml`
+- `themes/FixIt/layouts/_partials/init/detection-deprecated.html`
 
 ## 1) Hugo global config (used by FixIt)
 
-- `baseURL`, `title`, `theme`, `languageCode`, `defaultContentLanguage`
+- `baseURL`, `title`, `theme`, `locale`, `defaultContentLanguage`
 - `outputs` (FixIt uses extra outputs: archives, search, etc.)
 - `taxonomies`
 - `menu` (main navigation)
@@ -31,7 +33,7 @@ Primary source:
 
 ### Footer
 
-- `params.footer`, `params.footer.powered`, `params.footer.siteTime`, `params.footer.order`
+- `params.footer`, `params.footer.powered`, `params.footer.site_time`, `params.footer.order`
 
 ### Search
 
@@ -50,14 +52,14 @@ Primary source:
 - `params.archives`
 - `params.section` (and `section.feed`)
 - `params.list` (and `list.feed`)
-- `params.tagcloud`
-- `params.recentlyUpdated`
+- `params.tag_cloud`
+- `params.recently_updated`
 
 ### Social & profile
 
 - `params.social` (GitHub, Twitter, etc.)
 - `params.gravatar`
-- `params.githubCorner`
+- `params.github_corner`
 
 ### Typography / UX
 
@@ -86,39 +88,40 @@ Primary source:
 - `params.compatibility`
 - `params.dev`
 
-## 3) Page-level defaults (`params.page.*`)
+## 3) Page-level defaults (`params.*`)
 
-These define default behaviors for all pages. Most can be overridden by front matter.
+FixIt v1 removes the `params.page` table. Page-level defaults live directly under
+`params` and most can be overridden by front matter.
 
-- `params.page` (root defaults)
-- `params.page.toc` (auto/ordered)
-- `params.page.heading` (section numbering)
-- `params.page.math` (katex/mathjax, macros)
-- `params.page.mapbox`
-- `params.page.related`
-- `params.page.reward`
-- `params.page.share`
-- `params.page.comment` (artalk, disqus, gitalk, valine, waline, giscus, etc.)
-- `params.page.library` (custom CSS/JS)
-- `params.page.seo`
-- `params.page.repost`
-- `params.page.expirationReminder`
+- Root defaults such as `params.page_style`, `params.word_count`, and `params.reading_time`
+- `params.toc` (auto/ordered)
+- `params.heading` (section numbering)
+- `params.math` (katex/mathjax, macros)
+- `params.mapbox`
+- `params.related`
+- `params.reward`
+- `params.share`
+- `params.comment` (artalk, disqus, gitalk, valine, waline, giscus, etc.)
+- `params.library` (custom CSS/JS)
+- `params.seo`
+- `params.expiration_reminder`
+- `params.post_link` (Markdown/source/edit/report/editor links)
 
 ## 4) Other FixIt feature configs
 
 - `params.admonition` (customize alert styles)
-- `params.taskList` (task list rendering)
-- `params.repoVersion` (version shortcode)
+- `params.task_list` (task list rendering)
+- `params.repo_version` (version shortcode)
 - `params.mermaid` (diagram support)
 - `params.codeblock` (code copy buttons, etc.)
-- `params.jsonViewer`
+- `params.json_viewer`
 
 ## 5) Content management and front matter
 
 Use FixIt front matter fields to override defaults:
 
 - Standard: `title`, `date`, `tags`, `categories`, `draft`, `summary`, `images`
-- FixIt-specific: `featuredImage`, `lightgallery`, `toc`, `math`, `comment`, etc.
+- FixIt-specific: `featured_image`, `lightgallery`, `toc`, `math`, `comment`, etc.
 
 See:
 - `content/zh-cn/documentation/content-management/introduction/index.md`

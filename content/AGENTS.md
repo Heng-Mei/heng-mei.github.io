@@ -59,7 +59,7 @@ Preference order: page-bundle（与 `.md` 同目录）→ `../assets/`（pipelin
 
 ## GOTCHAS
 
-- `hugo.toml` 中 `params.page.toc.auto = false`；只有在页面 front matter
+- `hugo.toml` 中 `params.toc.auto = false`；只有在页面 front matter
   中设置 `toc = true` 才会渲染目录。
 - MathJax passthrough 已启用：数学定界符之外的裸 `$` 会被解析为公式。
   应转义为 `\$` 或放入代码围栏。

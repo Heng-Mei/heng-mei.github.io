@@ -2,7 +2,18 @@
 
 FixIt docs live in `skills/heng-mei-blog/references/hugo-fixit-docs`.
 
-## Most important docs (start here)
+## FixIt v1 source of truth
+
+This repository pins an unreleased FixIt v1 commit. The public docs currently mix
+v0.4 configuration examples with v1 development. For configuration migrations,
+start with:
+
+- `themes/FixIt/hugo.toml`
+- `themes/FixIt/layouts/_partials/init/detection-deprecated.html`
+
+Do not copy `[params.page]` or camelCase theme keys from older documentation.
+
+## Public documentation
 
 - Theme configuration (full list):
   - `content/zh-cn/documentation/getting-started/configuration/index.md`
